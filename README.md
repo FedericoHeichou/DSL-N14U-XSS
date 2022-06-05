@@ -10,11 +10,11 @@ We have not yet tested Asus models other than those listed. However we suspect i
 
 ## Overview
 
-In router Asus DSL-N14U-B1 1.1.2.3_805 was discovered to contain a stored cross-site scripting (XSS) vulnerability via the "`*list`" parameters (e.g. filter_lwlist, keyword_rulelist, etc) in every ".asp" page containing a list of stored strings (e.g. Advanced_Firewall_Content.asp, Advanced_KeywordFilter_Content.asp). 
+In router **Asus DSL-N14U-B1 1.1.2.3_805** was discovered to contain a stored cross-site scripting (XSS) vulnerability via the "`*list`" parameters (e.g. `filter_lwlist`, `keyword_rulelist`, etc) in every "`.asp`" page containing a list of stored strings (e.g. `Advanced_Firewall_Content.asp`, `Advanced_KeywordFilter_Content.asp`). 
 
 ## POC
 
-Via a `*list` parameter (e.g. filter_lwlist, keyword_rulelist, etc) in every "`.asp`" page containing a list of stored strings (e.g. Advanced_Firewall_Content.asp, Advanced_KeywordFilter_Content.asp) the functions `tcWebApi_get` and `TCWebApi_get` are executed to generate dynamic JavaScript code.
+Via a `*list` parameter (e.g. `filter_lwlist`, `keyword_rulelist`, etc) in every "`.asp`" page containing a list of stored strings (e.g. `Advanced_Firewall_Content.asp`, `Advanced_KeywordFilter_Content.asp`) the functions `tcWebApi_get` and `TCWebApi_get` are executed to generate dynamic JavaScript code.
 
 E.g. `filter_lwlist` in `/cgi-bin/Advanced_Firewall_Content.asp`:  
 Passing in the `POST` body:
