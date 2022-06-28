@@ -1,3 +1,4 @@
+# CVE-2022-32988
 ## Affected products
 
 We have not yet tested Asus models other than those listed. However we suspect it may also work on other models with the same firmware version.
